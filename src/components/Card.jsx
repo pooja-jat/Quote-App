@@ -6,7 +6,9 @@ const Card = () => {
   const { quoteData, dispatch } = useContext(QuoteContext);
 
   const getQuote = async () => {
+
     const data = await fetchQuote();
+
     dispatch({
       type :  "Get_Quote" ,
       payload : data,
@@ -23,7 +25,7 @@ const Card = () => {
       <p className="text-sm font-semibold">{quoteData?.author}</p>
       <button
         onClick={getQuote}
-        className="mt-6 bg-green-600 py-2 w-full rounded-4xl font-bold text-white hover:bg-green-400 hover: cursor-pointer"
+        className="mt-6 bg-indigo-700 py-2 w-full rounded-4xl font-bold text-white hover:bg-indigo-300 hover: cursor-pointer"
       >
         Get More
       </button>
